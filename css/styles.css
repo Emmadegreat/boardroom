@@ -121,23 +121,59 @@ main{
     right: 20%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
 }
 
-.schedule-container div{
-
+.schedule-container .schedule-card{
+    display: flex;
+    align-items: center;
     padding: 4px 10px;
     flex:1;
-    text-align: start;
-}
-.schedule-container div{
-    margin-left: 30px;
+    justify-content: center;
+    position: relative;
 }
 
-/* .schedule-container small{
-    height: 50px;
-    margin-bottom: -10px;
-} */
+
+.schedule-card:not(:last-child)::after{
+    content: "";
+    width: 2px;
+    height: 30px;
+    position: absolute;
+    background-color: #C2996C;
+    right: 2px;
+}
+
+.schedule-card img{
+    width: 20px;
+    height: auto;
+    margin-right: 8px;
+}
+.schedule-card .input{
+    width: 19px;
+    color: #C2996C;
+    border: none;
+    display: none !important;
+}
+
+.schedule-card p{
+    color: #0C2149;
+    font-size: 16px;
+}
+
+.search-btn{
+    width: 120px;
+    height: 40px;
+    background-color: #fff;
+    border: 1.4px solid #C2996C;
+    padding: 10px;
+    display: block;
+}
+
+.search-btn ::placeholder{
+    text-align: center;
+    text-transform: uppercase;
+}
 
 .welcome-section{
     background-color: rgb(215, 217, 219);
@@ -164,7 +200,7 @@ h3::after{
     height: 2px;
     background-color: #0C2149;
     position: absolute;
-    top: 80px;
+    top: 90px;
     bottom: 50px;
     right: 50%;
 }
@@ -408,6 +444,18 @@ footer{
     color: #383838;
     text-transform: capitalize;
     font-size: 16px;
+}
+
+.footer-card .socials{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-card .socials img{
+    width: 16px;
+    min-height: 16px;
+    margin-right: 20px;
 }
 
 .footer-text-wrapper{
